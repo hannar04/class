@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .notice{
+            color:red;
+            font-size:11px;
+        }
+    </style>
+    <script>
+        function do_submit(){
+            let id_message= document.getElementById('id_message');
+            let passwd_message= document.getElementById('passwd_message'); 
+
+            passwd1_message.innerHTML='(영어은 0부터 100까지의 숫자만 입력합니다)';
+            
+            return false;
+        }
+    </script>
+</head>
+<body>
+    <form name="login_form" method="post" action="#" onSubmit="return do_submit();">
+    <table>  
+    <tr>
+        <td></td>
+        <td><h1>학생성적처리</h1></td>
+    </tr>
+    <tr>
+        <td>학번</td>
+        <td><input type="text" name="user_id"><p id="id_message" class="notice"></p></td>
+    </tr>
+    <tr>
+        <td>이름</td>
+        <td><input type="password" name="user_passwd"></td>
+    </tr>  
+    <tr>
+        <td>국어</td>
+        <td><input type="password" name="user_passwd"><p id="passwd_message"class="notice"></p></td>
+    </tr>
+    <tr>
+        <td>영어</td>
+        <td><input type="password1" name="user_passwd"><p id="passwd1_message"class="notice"></p></td>
+    </tr>
+    <tr>
+        <td>수학</td>
+        <td><input type="password2" name="user_passwd"><p id="passwd2_message"class="notice"></p></td>
+    </tr> 
+    <tr height="50px">
+        <td></td>
+        <td>
+            <input type="submit" value="성적">
+        </td>
+    </tr> 
+    </table>  
+    </form>
+</body>
+</html>
